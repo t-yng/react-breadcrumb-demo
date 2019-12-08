@@ -18,9 +18,11 @@ $ yarn dev
 ### Parent Component
 
 ```
-<BreadcrumbProvider>
-    <children>
-</BreadcrumbProvider>
+export const ParentComponent = () => (
+    <BreadcrumbProvider>
+        <ChildComponent />
+    </BreadcrumbProvider>
+)
 ```
 
 ### Child Component
