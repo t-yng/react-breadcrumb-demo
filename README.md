@@ -10,7 +10,7 @@ This is React breadcrumb component example with ContextAPI And React Hooks;
 
 You can access http://localhost:3000
 
-```
+```bash
 $ git clone https://github.com/t-yng/react-breadcrumb-demo.git
 $ cd react-breadcrumb-demo
 $ yarn install
@@ -21,7 +21,7 @@ $ yarn dev
 
 ### Root Component
 
-```
+```tsx
 export const RootComponent: FC<{}> = ({ children }) => (
     <BreadcrumbProvider>
         {children}
@@ -31,7 +31,7 @@ export const RootComponent: FC<{}> = ({ children }) => (
 
 ### Child Component
 
-```
+```tsx
 export const ChildComponent = {
     useBreadcrumb([
         {
