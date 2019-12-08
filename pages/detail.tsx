@@ -2,7 +2,7 @@ import React from 'react';
 import { useBreadcrumb } from '../src/components/Breadcrumb';
 
 const Detail = () => {
-    const items = [
+    useBreadcrumb([
         {
             id: 1,
             text: 'Home',
@@ -17,9 +17,7 @@ const Detail = () => {
             id: 3,
             text: 'Detail',
         }
-    ];
-
-    useBreadcrumb(items);
+    ]);
 
     return (
         <div>

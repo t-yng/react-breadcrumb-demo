@@ -4,6 +4,10 @@ This is React breadcrumb component example with ContextAPI And React Hooks;
 
 ## Demo
 
+[![Edit react-breadcrumb-demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/t-yng/react-breadcrumb-example/tree/master/?fontsize=14&hidenavigation=1&theme=dark)
+
+## Installation
+
 You can access http://localhost:3000
 
 ```
@@ -15,12 +19,12 @@ $ yarn dev
 
 ## Usage
 
-### Parent Component
+### Root Component
 
 ```
-export const ParentComponent = () => (
+export const RootComponent: FC<{}> = ({ children }) => (
     <BreadcrumbProvider>
-        <ChildComponent />
+        {children}
     </BreadcrumbProvider>
 )
 ```
@@ -29,7 +33,7 @@ export const ParentComponent = () => (
 
 ```
 export const ChildComponent = {
-    const items = [
+    useBreadcrumb([
         {
             id: 1,
             text: 'Home',
@@ -39,9 +43,7 @@ export const ChildComponent = {
             id: 2,
             text: 'About',
         }
-    ]
-
-    useBreadcrumb(items);
+    ]);
 
     return <h1>This is About Page</h1>
 }

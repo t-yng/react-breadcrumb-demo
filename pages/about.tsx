@@ -3,7 +3,7 @@ import { useBreadcrumb } from '../src/components/Breadcrumb';
 import Link from 'next/link';
 
 const About = () => {
-    const items = [
+    useBreadcrumb([
         {
             id: 1,
             text: 'Home',
@@ -13,9 +13,7 @@ const About = () => {
             id: 2,
             text: 'About',
         }
-    ]
-
-    useBreadcrumb(items);
+    ]);
 
     return (
         <div>
