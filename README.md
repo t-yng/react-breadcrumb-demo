@@ -12,3 +12,35 @@ $ cd react-breadcrumb-demo
 $ yarn install
 $ yarn dev
 ```
+
+## Usage
+
+### Parent Component
+
+```
+<BreadcrumbProvider>
+    <children>
+</BreadcrumbProvider>
+```
+
+### Child Component
+
+```
+export const ChildComponent = {
+    const items = [
+        {
+            id: 1,
+            text: 'Home',
+            href: '/'
+        },
+        {
+            id: 2,
+            text: 'About',
+        }
+    ]
+
+    useBreadcrumb(items);
+
+    return <h1>This is About Page</h1>
+}
+```
